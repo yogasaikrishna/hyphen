@@ -1,7 +1,69 @@
-button {
-  background: #000;
+.button {
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+  margin: 0 1rem 1rem 0;
+  padding: 0.85em 1em;
+  text-align: center;
+  transition: all .25s ease-out;
 }
 
-button span {
-  color: #09091a;
+.button.tiny {
+  font-size: 0.65rem;
+}
+
+.button.small {
+  font-size: 0.75rem;
+}
+
+.button.large {
+  font-size: 1.25rem;
+}
+
+.button.round {
+  border-radius: 3px;
+}
+
+.button.primary {
+  background: #1fbad6;
+  color: #fff;
+}
+
+.button.primary:hover, .button.primary:focus {
+  background: #1995ab;
+}
+
+.button.secondary {
+  background: #09091a;
+  color: #fff;
+}
+
+.button.secondary:hover, .button.secondary:focus {
+  background: #070715;
+}
+
+.button.tertiary {
+  background: #c0c0c8;
+  color: #000;
+}
+
+.button.tertiary:hover, .button.tertiary:focus {
+  background: #9696a3;
+}
+
+[type="text"], [type="password"],
+textarea {
+  border: 1px solid #c0c0c8;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: block;
+  padding: 8px;
+  width: 100%;
+}
+
+[type="text"]:focus, [type="password"]:focus,
+textarea:focus {
+  border: 1px solid #1fbad6;
+  box-shadow: 0 0 5px #1fbad6;
 }

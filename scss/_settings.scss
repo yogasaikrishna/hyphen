@@ -7,3 +7,16 @@ $black: #000;
 $base-black: #09091a !default;
 $base-blue: #1fbad6 !default;
 $base-white: #c0c0c8 !default;
+
+// Margin
+$base-margin: 1rem !default;
+
+// Padding
+$base-padding: 1rem !default;
+
+// Map of base colors
+$hyphen-colors: (
+  primary: $base-blue,
+  secondary: $base-black,
+  tertiary: $base-white
+);

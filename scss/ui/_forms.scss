@@ -1,0 +1,46 @@
+// Form input styles
+
+$input-border: 1px solid $base-white !default;
+
+// Function returns all/set of input types
+@function input-elements($types: ()) {
+  $result: ();
+
+  $input-types: (
+    text,
+    password
+  );
+
+  @if $types == () {
+    $types: $input-types;
+  }
+
+  @each $type in $types {
+    $result: append($result, unquote('[type="#{$type}"]'), comma);
+  }
+
+  @return $result;
+}
+
+// Mixin for form elements
+@mixin form-element {
+  border: $input-border;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: block;
+  padding: 8px;
+  width: 100%;
+}
+
+@mixin focus-style {
+  &:focus {
+    border: 1px solid $base-blue;
+    box-shadow: 0 0 5px $base-blue;
+  }
+}
+
+#{input-elements()},
+textarea {
+  @include form-element;
+  @include focus-style;
+}

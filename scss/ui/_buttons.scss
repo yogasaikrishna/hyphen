@@ -1,7 +1,76 @@
-button {
-  background: $black;
+// Button styles
 
-  span {
-    color: $base-black;
+$button-padding: .85em 1em !default;
+$button-margin: 0 $base-margin $base-margin 0 !default;
+$button-radius: 3px;
+
+// Default background color for button
+$button-background: $base-blue;
+
+// Hover color
+$button-background-hover: scale-color($button-background, $lightness: -15%) !default;
+
+// Button text color
+$button-color: #fff !default;
+$button-alt-color: #000 !default;
+
+// Button sizes
+$button-sizes: (
+  tiny: .65rem,
+  small: .75rem,
+  default: .9rem,
+  large: 1.25rem
+) !default;
+
+@mixin base-button {
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: map-get($button-sizes, default);
+  line-height: 1;
+  margin: $button-margin;
+  padding: $button-padding;
+  text-align: center;
+  transition: all .25s ease-out;
+}
+
+@mixin button-style (
+  $background: $button-background,
+  $background-hover: $button-background-hover,
+  $color: $button-color
+) {
+  @if $background-hover == auto {
+    $background-hover: scale-color($background, $lightness: -20%);
   }
+
+  @if lightness($background) >= 70% {
+    $color: $button-alt-color;
+  } @else {
+    $color: $button-color;
+  }
+
+  background: $background;
+  color: $color;
+
+  &:hover,
+  &:focus {
+    background: $background-hover;
+  }
+}
+
+.button {
+  @include base-button;
+
+  // Different sizes
+  &.tiny {  font-size: map-get($button-sizes, tiny);  }
+  &.small { font-size: map-get($button-sizes, small); }
+  &.large { font-size: map-get($button-sizes, large); }
+
+  &.round { border-radius: $button-radius; }
+
+  @each $name, $color in $hyphen-colors {
+    &.#{$name} {
+      @include button-style($color, auto);
+    }
+  }
+
 }
