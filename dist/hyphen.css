@@ -1,0 +1,7 @@
+input[type="button"] {
+  background: #1fbad6;
+}
+
+input[type="button"] span {
+  color: #09091a;
+}
