@@ -1,0 +1,25 @@
+// Text styles
+
+@mixin base-text {
+  font-size: map-get($base-sizes, default);
+}
+
+@mixin text-style($color) {
+  color: $color;
+}
+
+.text {
+  @include base-text;
+
+  // Text with different sizes
+  @at-root #{&}--tiny { font-size: map-get($base-sizes, tiny); };
+  @at-root #{&}--small { font-size: map-get($base-sizes, small); };
+  @at-root #{&}--large { font-size: map-get($base-sizes, large); };
+
+  // Text with different colors
+  @each $name, $color in $hyphen-colors {
+    @at-root #{&}--#{$name} {
+      @include text-style($color);
+    }
+  }
+}

@@ -1,4 +1,5 @@
-.button {
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+.btn {
   border: 1px solid transparent;
   cursor: pointer;
   font-size: 0.9rem;
@@ -9,61 +10,247 @@
   transition: all .25s ease-out;
 }
 
-.button.tiny {
+.btn--tiny {
   font-size: 0.65rem;
 }
 
-.button.small {
+.btn--small {
   font-size: 0.75rem;
 }
 
-.button.large {
+.btn--large {
   font-size: 1.25rem;
 }
 
-.button.round {
+.btn--round {
   border-radius: 3px;
 }
 
-.button.primary {
-  background: #1fbad6;
+.btn--primary {
+  background: #3498db;
   color: #fff;
 }
 
-.button.primary:hover, .button.primary:focus {
-  background: #1995ab;
+.btn--primary:hover, .btn--primary:focus {
+  background: #5dade2;
 }
 
-.button.secondary {
-  background: #09091a;
+.btn--secondary {
+  background: #34495e;
   color: #fff;
 }
 
-.button.secondary:hover, .button.secondary:focus {
-  background: #070715;
+.btn--secondary:hover, .btn--secondary:focus {
+  background: #4e6d8d;
 }
 
-.button.tertiary {
-  background: #c0c0c8;
+.btn--tertiary {
+  border-color: #bdc3c7;
+  background: #ecf0f1;
   color: #000;
 }
 
-.button.tertiary:hover, .button.tertiary:focus {
-  background: #9696a3;
+.btn--tertiary:hover, .btn--tertiary:focus {
+  background: #d1dadd;
 }
 
-[type="text"], [type="password"],
-textarea {
-  border: 1px solid #c0c0c8;
+.btn--success {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.btn--success:hover, .btn--success:focus {
+  background: #55d98d;
+}
+
+.btn--alert {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.btn--alert:hover, .btn--alert:focus {
+  background: #ec7063;
+}
+
+.input {
+  border: 1px solid #bdc3c7;
   border-radius: 3px;
   box-sizing: border-box;
   display: block;
+  outline: 0;
   padding: 8px;
+  transition: all .15s ease-in;
   width: 100%;
 }
 
-[type="text"]:focus, [type="password"]:focus,
-textarea:focus {
-  border: 1px solid #1fbad6;
-  box-shadow: 0 0 5px #1fbad6;
+.input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 2px #3498db;
+}
+
+.input--primary {
+  border-color: #3498db;
+  box-shadow: 0 0 2px #3498db;
+}
+
+.input--primary:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 2px #3498db;
+}
+
+.input--secondary {
+  border-color: #34495e;
+  box-shadow: 0 0 2px #34495e;
+}
+
+.input--secondary:focus {
+  border-color: #34495e;
+  box-shadow: 0 0 2px #34495e;
+}
+
+.input--tertiary {
+  border-color: #ecf0f1;
+  box-shadow: 0 0 2px #ecf0f1;
+}
+
+.input--tertiary:focus {
+  border-color: #ecf0f1;
+  box-shadow: 0 0 2px #ecf0f1;
+}
+
+.input--success {
+  border-color: #2ecc71;
+  box-shadow: 0 0 2px #2ecc71;
+}
+
+.input--success:focus {
+  border-color: #2ecc71;
+  box-shadow: 0 0 2px #2ecc71;
+}
+
+.input--alert {
+  border-color: #e74c3c;
+  box-shadow: 0 0 2px #e74c3c;
+}
+
+.input--alert:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 2px #e74c3c;
+}
+
+.input--disabled {
+  background: #d5dde0;
+  cursor: not-allowed;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon__icon {
+  color: #c0cdd1;
+  position: absolute;
+  top: 8px;
+}
+
+.input-icon--right .input-icon__icon {
+  float: right;
+  right: 10px;
+}
+
+.input-icon--right .input-icon__input {
+  padding-right: 25px;
+}
+
+.input-icon--left .input-icon__icon {
+  left: 10px;
+}
+
+.input-icon--left .input-icon__input {
+  padding-left: 25px;
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+.text {
+  font-size: 0.9rem;
+}
+
+.text--tiny {
+  font-size: 0.65rem;
+}
+
+.text--small {
+  font-size: 0.75rem;
+}
+
+.text--large {
+  font-size: 1.25rem;
+}
+
+.text--primary {
+  color: #3498db;
+}
+
+.text--secondary {
+  color: #34495e;
+}
+
+.text--tertiary {
+  color: #ecf0f1;
+}
+
+.text--success {
+  color: #2ecc71;
+}
+
+.text--alert {
+  color: #e74c3c;
+}
+
+h1 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h2 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h3 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h4 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h5 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h6 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+label {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+button {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+table {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+textarea {
+  font-family: "Roboto Condensed", sans-serif;
 }

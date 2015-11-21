@@ -1,0 +1,9 @@
+// Label styles
+
+$label-color: #95a5a6 !default;
+$label-font-size: .9rem;
+
+label {
+  color: $label-color;
+  font-size: $label-font-size;
+}

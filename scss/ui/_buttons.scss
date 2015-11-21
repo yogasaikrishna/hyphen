@@ -14,14 +14,13 @@ $button-background-hover: scale-color($button-background, $lightness: -15%) !def
 $button-color: #fff !default;
 $button-alt-color: #000 !default;
 
-// Button sizes
-$button-sizes: (
-  tiny: .65rem,
-  small: .75rem,
-  default: .9rem,
-  large: 1.25rem
-) !default;
+// Button border color
+$button-border-color: $base-border-color !default;
 
+// Button sizes
+$button-sizes: $base-sizes !default;
+
+// Base button styles applied to all <button class="btn"></button>
 @mixin base-button {
   border: 1px solid transparent;
   cursor: pointer;
@@ -33,17 +32,20 @@ $button-sizes: (
   transition: all .25s ease-out;
 }
 
+// Applies button styles background, color and hover background
 @mixin button-style (
   $background: $button-background,
   $background-hover: $button-background-hover,
   $color: $button-color
 ) {
   @if $background-hover == auto {
-    $background-hover: scale-color($background, $lightness: -20%);
+    $background-hover: scale-color($background, $lightness: 20%);
   }
 
   @if lightness($background) >= 70% {
     $color: $button-alt-color;
+    $background-hover: scale-color($background, $lightness: -10%);
+    border-color: $button-border-color;
   } @else {
     $color: $button-color;
   }
@@ -57,18 +59,20 @@ $button-sizes: (
   }
 }
 
-.button {
+.btn {
   @include base-button;
 
   // Different sizes
-  &.tiny {  font-size: map-get($button-sizes, tiny);  }
-  &.small { font-size: map-get($button-sizes, small); }
-  &.large { font-size: map-get($button-sizes, large); }
+  @at-root #{&}--tiny {  font-size: map-get($button-sizes, tiny);  }
+  @at-root #{&}--small { font-size: map-get($button-sizes, small); }
+  @at-root #{&}--large { font-size: map-get($button-sizes, large); }
 
-  &.round { border-radius: $button-radius; }
+  // Button with round corners
+  @at-root #{&}--round { border-radius: $button-radius; }
 
+  // Button styles with all colors
   @each $name, $color in $hyphen-colors {
-    &.#{$name} {
+    @at-root #{&}--#{$name} {
       @include button-style($color, auto);
     }
   }

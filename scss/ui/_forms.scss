@@ -1,6 +1,6 @@
 // Form input styles
 
-$input-border: 1px solid $base-white !default;
+$input-border: 1px solid $base-border-color !default;
 
 // Function returns all/set of input types
 @function input-elements($types: ()) {
@@ -16,7 +16,7 @@ $input-border: 1px solid $base-white !default;
   }
 
   @each $type in $types {
-    $result: append($result, unquote('[type="#{$type}"]'), comma);
+    $result: append($result, unquote('[type="#{$type}"].input'), comma);
   }
 
   @return $result;
@@ -28,19 +28,88 @@ $input-border: 1px solid $base-white !default;
   border-radius: 3px;
   box-sizing: border-box;
   display: block;
+  outline: 0;
   padding: 8px;
+  transition: all .15s ease-in;
   width: 100%;
-}
 
-@mixin focus-style {
   &:focus {
-    border: 1px solid $base-blue;
-    box-shadow: 0 0 5px $base-blue;
+    border-color: $base-blue;
+    box-shadow: 0 0 2px $base-blue;
   }
 }
 
-#{input-elements()},
-textarea {
+// Mixin for input with icon
+@mixin input-icon {
+  position: relative;
+
+  @at-root #{&}__icon {
+    color: darken($base-white, 15%);
+    position: absolute;
+    top: 8px;
+  }
+}
+
+// Position icon inside the input field
+@mixin input-icon-position($position) {
+  .input-icon__icon {
+    @if $position == left {
+      left: 10px;
+    } @else {
+      float: right;
+      right: 10px;
+    }
+  }
+
+  .input-icon__input {
+    @if $position == left {
+      padding-left: 25px;
+    } @else {
+      padding-right: 25px;
+    }
+  }
+}
+
+@mixin element-style($color) {
+  border-color: $color;
+  box-shadow: 0 0 2px $color;
+
+  &:focus {
+    border-color: $color;
+    box-shadow: 0 0 2px $color;
+  }
+}
+
+.input {
   @include form-element;
-  @include focus-style;
+
+  // Generates input with all colors
+  @each $name, $color in $hyphen-colors {
+    @at-root #{&}--#{$name} {
+      @include element-style($color);
+    }
+  }
+
+  // Disables state
+  @at-root #{&}--disabled {
+    background: darken($base-white, 8%);
+    cursor: not-allowed;
+  }
+}
+
+// Input with icon
+.input-icon {
+  @include input-icon;
+
+  @at-root #{&}--right {
+    @include input-icon-position(right);
+  }
+
+  @at-root #{&}--left {
+    @include input-icon-position(left);
+  }
+}
+
+textarea {
+  resize: none;
 }

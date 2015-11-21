@@ -3,29 +3,169 @@
 
 <head>
   <title>Hyphen CSS Framework</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/hyphen.css">
 </head>
 
 <body>
-  <button class="button primary tiny">PRIMARY</button>
-  <button class="button primary small">PRIMARY</button>
-  <button class="button primary round">PRIMARY</button>
-  <button class="button primary large">PRIMARY</button>
+  <table cellspacing="10" cellpadding="10">
+    <tr>
+      <td></td>
+      <td><label>TINY</label></td>
+      <td><label>SMALL</label></td>
+      <td><label>DEFAULT</label></td>
+      <td><label>LARGE</label></td>
+    </tr>
+    <tr>
+      <td><label>PRIMARY</label></td>
+      <td>
+        <button class="btn btn--primary btn--tiny btn--round">PRIMARY</button>
+      </td>
+      <td>
+        <button class="btn btn--primary btn--small btn--round">PRIMARY</button>
+      </td>
+      <td>
+        <button class="btn btn--primary btn--round">PRIMARY</button>
+      </td>
+      <td>
+        <button class="btn btn--primary btn--large btn--round">PRIMARY</button>
+      </td>
+    </tr>
+    <tr>
+      <td><label>SECONDARY</label></td>
+      <td>
+        <button class="btn btn--secondary btn--tiny btn--round">SECONDARY</button>
+      </td>
+      <td>
+        <button class="btn btn--secondary btn--small btn--round">SECONDARY</button>
+      </td>
+      <td>
+        <button class="btn btn--secondary btn--round">SECONDARY</button>
+      </td>
+      <td>
+        <button class="btn btn--secondary btn--large btn--round">SECONDARY</button>
+      </td>
+    </tr>
+    <tr>
+      <td><label>TERTIARY</label></td>
+      <td>
+        <button class="btn btn--tertiary btn--tiny btn--round">TERTIARY</button>
+      </td>
+      <td>
+        <button class="btn btn--tertiary btn--small btn--round">TERTIARY</button>
+      </td>
+      <td>
+        <button class="btn btn--tertiary btn--round">TERTIARY</button>
+      </td>
+      <td>
+        <button class="btn btn--tertiary btn--large btn--round">TERTIARY</button>
+      </td>
+    </tr>
+    <tr>
+      <td><label>SUCCESS</label></td>
+      <td>
+        <button class="btn btn--success btn--tiny btn--round">SUCCESS</button>
+      </td>
+      <td>
+        <button class="btn btn--success btn--small btn--round">SUCCESS</button>
+      </td>
+      <td>
+        <button class="btn btn--success btn--round">SUCCESS</button>
+      </td>
+      <td>
+        <button class="btn btn--success btn--large btn--round">SUCCESS</button>
+      </td>
+    </tr>
+    <tr>
+      <td><label>ALERT</label></td>
+      <td>
+        <button class="btn btn--alert btn--tiny btn--round">ALERT</button>
+      </td>
+      <td>
+        <button class="btn btn--alert btn--small btn--round">ALERT</button>
+      </td>
+      <td>
+        <button class="btn btn--alert btn--round">ALERT</button>
+      </td>
+      <td>
+        <button class="btn btn--alert btn--large btn--round">ALERT</button>
+      </td>
+    </tr>
+  </table>
   <br/>
-  <button class="button secondary tiny">PRIMARY</button>
-  <button class="button secondary small">PRIMARY</button>
-  <button class="button secondary">PRIMARY</button>
-  <button class="button secondary large">PRIMARY</button>
   <br/>
-  <button class="button tertiary tiny">PRIMARY</button>
-  <button class="button tertiary small">PRIMARY</button>
-  <button class="button tertiary">PRIMARY</button>
-  <button class="button tertiary large">PRIMARY</button>
+  <table cellpadding="10" cellspacing="10">
+    <tr>
+      <td>
+        <label>INPUT DEFAULT</label>
+        <input type="text" class="input" placeholder="Placeholder"/>
+      </td>
+      <td>
+        <label>INPUT ERROR</label>
+        <input type="text" class="input input--alert" value="Some value"/>
+      </td>
+      <td>
+        <label>ICON INPUT</label>
+        <div class="input-icon input-icon--left">
+          <i class="fa fa-lock input-icon__icon"></i>
+          <input type="password" class="input input-icon__input" placeholder="Password"/>
+        </div>
+      </td>
+      <td>
+        <label>ICON INPUT RIGHT</label>
+        <div class="input-icon input-icon--right">
+          <i class="fa fa-search input-icon__icon"></i>
+          <input type="password" class="input input-icon__input" placeholder="Search"/>
+        </div>
+      </td>
+      <td>
+        <label>INPUT DISABLED</label>
+        <input type="text" class="input input--disabled" placeholder="No value" disabled/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>DEFAULT SELECT</label>
+        <select class="input">
+          <option value="1">India</option>
+          <option value="2">Amsterdam</option>
+          <option value="3">United States</option>
+        </select>
+      </td>
+      <td>
+        <label>SELECT ERROR</label>
+        <select class="input input--alert">
+          <option value="1">India</option>
+          <option value="2" selected>Amsterdam</option>
+          <option value="3">United States</option>
+        </select>
+      </td>
+      <td>
+        <label>SELECT DISABLED</label>
+        <select class="input input--disabled" disabled>
+          <option value="1">India</option>
+          <option value="2">Amsterdam</option>
+          <option value="3" selected>United States</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>DEFAULT TEXTAREA</label>
+        <textarea placeholder="Minimum 120 characters" class="input" rows="4"></textarea>
+      </td>
+      <td>
+        <label>TEXTAREA ERROR</label>
+        <textarea placeholder="Minimum 120 characters" class="input input--alert" rows="4"></textarea>
+      </td>
+      <td>
+        <label>TEXTAREA DISABLED</label>
+        <textarea placeholder="Minimum 120 characters" class="input input--disabled" rows="4"></textarea>
+      </td>
+    </tr>
+  </table>
   <br/>
   <br/>
-  <div style="width: 250px">
-    <input type="text" />
-  </div>
 </body>
 
 </html>

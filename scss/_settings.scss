@@ -4,9 +4,11 @@ $white: #fff;
 $black: #000;
 
 // Primary colors
-$base-black: #09091a !default;
-$base-blue: #1fbad6 !default;
-$base-white: #c0c0c8 !default;
+$base-black: #34495e !default;
+$base-blue: #3498db !default;
+$base-white: #ecf0f1 !default;
+$base-green: #2ecc71 !default;
+$base-red: #e74c3c !default;
 
 // Margin
 $base-margin: 1rem !default;
@@ -14,9 +16,22 @@ $base-margin: 1rem !default;
 // Padding
 $base-padding: 1rem !default;
 
+// Border color
+$base-border-color: #bdc3c7 !default;
+
+// Map of sizes
+$base-sizes: (
+  tiny: .65rem,
+  small: .75rem,
+  default: .9rem,
+  large: 1.25rem
+) !default;
+
 // Map of base colors
 $hyphen-colors: (
   primary: $base-blue,
   secondary: $base-black,
-  tertiary: $base-white
+  tertiary: $base-white,
+  success: $base-green,
+  alert: $base-red
 );
