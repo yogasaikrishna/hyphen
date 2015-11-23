@@ -1,0 +1,55 @@
+// Responsive Grid Styles
+
+// Column count
+$grid-columns: 12 !default;
+
+// Max container width
+$grid-width: 78rem !default;
+
+// Column gutter
+$grid-column-gutter: .5rem !default;
+
+// Grid Spacing
+$grid-spacing: .875em;
+
+@mixin grid {
+  max-width: $grid-width;
+
+  // Clearfix
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+
+  // Space between grids
+  & + & {
+    margin-top: $grid-spacing;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// Mixin to generate grid columns
+@mixin grid-columns {
+  @for $i from 1 through $grid-columns {
+    @at-root #{&}--#{$i} {
+      width: $grid-width / 12 * $i - $grid-column-gutter;
+    }
+  }
+}
+
+.grid {
+  @include grid;
+
+  @at-root #{&}__item {
+    @include grid-columns;
+
+    box-sizing: border-box;
+    float: left;
+    margin-right: $grid-column-gutter;
+    vertical-align: top;
+  }
+}

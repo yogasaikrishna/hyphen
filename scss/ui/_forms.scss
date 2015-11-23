@@ -2,6 +2,9 @@
 
 $input-border: 1px solid $base-border-color !default;
 
+// Box shadow
+$input-box-shadow: 0 0 3px;
+
 // Function returns all/set of input types
 @function input-elements($types: ()) {
   $result: ();
@@ -28,6 +31,7 @@ $input-border: 1px solid $base-border-color !default;
   border-radius: 3px;
   box-sizing: border-box;
   display: block;
+  margin-top: 5px;
   outline: 0;
   padding: 8px;
   transition: all .15s ease-in;
@@ -35,7 +39,7 @@ $input-border: 1px solid $base-border-color !default;
 
   &:focus {
     border-color: $base-blue;
-    box-shadow: 0 0 2px $base-blue;
+    box-shadow: $input-box-shadow $base-blue;
   }
 }
 
@@ -46,7 +50,7 @@ $input-border: 1px solid $base-border-color !default;
   @at-root #{&}__icon {
     color: darken($base-white, 15%);
     position: absolute;
-    top: 8px;
+    top: 11px;
   }
 }
 
@@ -72,11 +76,11 @@ $input-border: 1px solid $base-border-color !default;
 
 @mixin element-style($color) {
   border-color: $color;
-  box-shadow: 0 0 2px $color;
+  box-shadow: $input-box-shadow $color;
 
   &:focus {
     border-color: $color;
-    box-shadow: 0 0 2px $color;
+    box-shadow: $input-box-shadow $color;
   }
 }
 
@@ -112,4 +116,11 @@ $input-border: 1px solid $base-border-color !default;
 
 textarea {
   resize: none;
+}
+
+// Fix for input type search
+input[type="search"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }

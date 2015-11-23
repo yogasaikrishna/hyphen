@@ -1,10 +1,15 @@
 // Hyphen CSS Framework
 
+// Third party library
+@import 'vendor/normalize';
+
 @import 'settings';
 
 // UI components in Hyphen
+@import 'ui/alerts';
 @import 'ui/buttons';
 @import 'ui/forms';
+@import 'ui/grid';
 @import 'ui/labels';
 @import 'ui/lists';
 @import 'ui/tables';

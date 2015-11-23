@@ -5,167 +5,303 @@
   <title>Hyphen CSS Framework</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/hyphen.css">
+  <style type="text/css">
+    body {
+      padding: 15px;
+    }
+
+    .col {
+      background: #ebf5fb;
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body>
-  <table cellspacing="10" cellpadding="10">
-    <tr>
-      <td></td>
-      <td><label>TINY</label></td>
-      <td><label>SMALL</label></td>
-      <td><label>DEFAULT</label></td>
-      <td><label>LARGE</label></td>
-    </tr>
-    <tr>
-      <td><label>PRIMARY</label></td>
-      <td>
-        <button class="btn btn--primary btn--tiny btn--round">PRIMARY</button>
-      </td>
-      <td>
-        <button class="btn btn--primary btn--small btn--round">PRIMARY</button>
-      </td>
-      <td>
-        <button class="btn btn--primary btn--round">PRIMARY</button>
-      </td>
-      <td>
-        <button class="btn btn--primary btn--large btn--round">PRIMARY</button>
-      </td>
-    </tr>
-    <tr>
-      <td><label>SECONDARY</label></td>
-      <td>
-        <button class="btn btn--secondary btn--tiny btn--round">SECONDARY</button>
-      </td>
-      <td>
-        <button class="btn btn--secondary btn--small btn--round">SECONDARY</button>
-      </td>
-      <td>
-        <button class="btn btn--secondary btn--round">SECONDARY</button>
-      </td>
-      <td>
-        <button class="btn btn--secondary btn--large btn--round">SECONDARY</button>
-      </td>
-    </tr>
-    <tr>
-      <td><label>TERTIARY</label></td>
-      <td>
-        <button class="btn btn--tertiary btn--tiny btn--round">TERTIARY</button>
-      </td>
-      <td>
-        <button class="btn btn--tertiary btn--small btn--round">TERTIARY</button>
-      </td>
-      <td>
-        <button class="btn btn--tertiary btn--round">TERTIARY</button>
-      </td>
-      <td>
-        <button class="btn btn--tertiary btn--large btn--round">TERTIARY</button>
-      </td>
-    </tr>
-    <tr>
-      <td><label>SUCCESS</label></td>
-      <td>
-        <button class="btn btn--success btn--tiny btn--round">SUCCESS</button>
-      </td>
-      <td>
-        <button class="btn btn--success btn--small btn--round">SUCCESS</button>
-      </td>
-      <td>
-        <button class="btn btn--success btn--round">SUCCESS</button>
-      </td>
-      <td>
-        <button class="btn btn--success btn--large btn--round">SUCCESS</button>
-      </td>
-    </tr>
-    <tr>
-      <td><label>ALERT</label></td>
-      <td>
-        <button class="btn btn--alert btn--tiny btn--round">ALERT</button>
-      </td>
-      <td>
-        <button class="btn btn--alert btn--small btn--round">ALERT</button>
-      </td>
-      <td>
-        <button class="btn btn--alert btn--round">ALERT</button>
-      </td>
-      <td>
-        <button class="btn btn--alert btn--large btn--round">ALERT</button>
-      </td>
-    </tr>
-  </table>
-  <br/>
-  <br/>
-  <table cellpadding="10" cellspacing="10">
-    <tr>
-      <td>
-        <label>INPUT DEFAULT</label>
-        <input type="text" class="input" placeholder="Placeholder"/>
-      </td>
-      <td>
-        <label>INPUT ERROR</label>
-        <input type="text" class="input input--alert" value="Some value"/>
-      </td>
-      <td>
-        <label>ICON INPUT</label>
-        <div class="input-icon input-icon--left">
-          <i class="fa fa-lock input-icon__icon"></i>
-          <input type="password" class="input input-icon__input" placeholder="Password"/>
+  <h1>BUTTONS</h1>
+  <div class="grid">
+    <div class="grid__item grid__item--2">&nbsp;</div>
+    <div class="grid__item grid__item--2">
+      <label class="label">TINY</label>
+    </div>
+    <div class="grid__item grid__item--2">
+      <label class="label">SMALL</label>
+    </div>
+    <div class="grid__item grid__item--2">
+      <label class="label">DEFAULT</label>
+    </div>
+    <div class="grid__item grid__item--2">
+      <label class="label">LARGE</label>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--2">
+      <label class="label">PRIMARY</label>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--primary btn--tiny btn--round">PRIMARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--primary btn--small btn--round">PRIMARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--primary btn--round">PRIMARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--primary btn--large btn--round">PRIMARY</button>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--2">
+      <label class="label">SECONDARY</label>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--secondary btn--tiny btn--round">SECONDARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--secondary btn--small btn--round">SECONDARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--secondary btn--round">SECONDARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--secondary btn--large btn--round">SECONDARY</button>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--2">
+      <label class="label">TERTIARY</label>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--tertiary btn--tiny btn--round">TERTIARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--tertiary btn--small btn--round">TERTIARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--tertiary btn--round">TERTIARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--tertiary btn--large btn--round">TERTIARY</button>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--2">
+      <label class="label">SUCCESS</label>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--success btn--tiny btn--round">SUCCESS</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--success btn--small btn--round">SUCCESS</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--success btn--round">SUCCESS</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--success btn--large btn--round">SUCCESS</button>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--2">
+      <label class="label">ALERT</label>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--alert btn--tiny btn--round">ALERT</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--alert btn--small btn--round">ALERT</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--alert btn--round">ALERT</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--alert btn--large btn--round">ALERT</button>
+    </div>
+  </div>
+  <h1>FORMS</h1>
+  <div class="grid">
+    <div class="grid__item grid__item--3">
+      <label class="label">INPUT DEFAULT</label>
+      <input type="text" class="input" placeholder="Placeholder"/>
+    </div>
+    <div class="grid__item grid__item--3">
+      <label class="label">INPUT ERROR</label>
+      <input type="text" class="input input--alert" value="Some value"/>
+    </div>
+    <div class="grid__item grid__item--3">
+      <label class="label">ICON INPUT</label>
+      <div class="input-icon input-icon--left">
+        <i class="fa fa-lock input-icon__icon"></i>
+        <input type="password" class="input input-icon__input" placeholder="Password"/>
+      </div>
+    </div>
+    <div class="grid__item grid__item--3">
+      <label class="label">ICON INPUT RIGHT</label>
+      <div class="input-icon input-icon--right">
+        <i class="fa fa-search input-icon__icon"></i>
+        <input type="search" class="input input-icon__input" placeholder="Search"/>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--3">
+      <label class="label">DEFAULT SELECT</label>
+      <select class="input">
+        <option value="1">India</option>
+        <option value="2">Amsterdam</option>
+        <option value="3">United States</option>
+      </select>
+    </div>
+    <div class="grid__item grid__item--3">
+      <label class="label">SELECT ERROR</label>
+      <select class="input input--alert">
+        <option value="1">India</option>
+        <option value="2" selected>Amsterdam</option>
+        <option value="3">United States</option>
+      </select>
+    </div>
+    <div class="grid__item grid__item--3">
+      <label class="label">SELECT DISABLED</label>
+      <select class="input input--disabled" disabled>
+        <option value="1">India</option>
+        <option value="2">Amsterdam</option>
+        <option value="3" selected>United States</option>
+      </select>
+    </div>
+    <div class="grid__item grid__item--3">
+      <label class="label">INPUT DISABLED</label>
+      <input type="text" class="input input--disabled" placeholder="No value" disabled/>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--4">
+      <label class="label">DEFAULT TEXTAREA</label>
+      <textarea placeholder="Minimum 120 characters" class="input" rows="4"></textarea>
+    </div>
+    <div class="grid__item grid__item--4">
+      <label class="label">TEXTAREA ERROR</label>
+      <textarea placeholder="Minimum 120 characters" class="input input--alert" rows="4"></textarea>
+    </div>
+    <div class="grid__item grid__item--4">
+      <label class="label">TEXTAREA DISABLED</label>
+      <textarea disabled placeholder="Minimum 120 characters" class="input input--disabled" rows="4"></textarea>
+    </div>
+  </div>
+  <h1>ALERTS</h1>
+  <div class="grid">
+    <div class="grid__item grid__item--6">
+      <div class="alert alert--primary">
+        <b class="text text--primary">Hey there!</b> I am a notification
+        <div class="alert__close alert--primary__close">
+          <i class="fa fa-close"></i>
         </div>
-      </td>
-      <td>
-        <label>ICON INPUT RIGHT</label>
-        <div class="input-icon input-icon--right">
-          <i class="fa fa-search input-icon__icon"></i>
-          <input type="password" class="input input-icon__input" placeholder="Search"/>
+      </div>
+    </div>
+    <div class="grid__item grid__item--6">
+      <div class="alert__invert alert__invert--primary">
+        <b class="text">Hey there!</b> I am a notification
+        <div class="alert__invert__close">
+          <i class="fa fa-close"></i>
         </div>
-      </td>
-      <td>
-        <label>INPUT DISABLED</label>
-        <input type="text" class="input input--disabled" placeholder="No value" disabled/>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <label>DEFAULT SELECT</label>
-        <select class="input">
-          <option value="1">India</option>
-          <option value="2">Amsterdam</option>
-          <option value="3">United States</option>
-        </select>
-      </td>
-      <td>
-        <label>SELECT ERROR</label>
-        <select class="input input--alert">
-          <option value="1">India</option>
-          <option value="2" selected>Amsterdam</option>
-          <option value="3">United States</option>
-        </select>
-      </td>
-      <td>
-        <label>SELECT DISABLED</label>
-        <select class="input input--disabled" disabled>
-          <option value="1">India</option>
-          <option value="2">Amsterdam</option>
-          <option value="3" selected>United States</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <label>DEFAULT TEXTAREA</label>
-        <textarea placeholder="Minimum 120 characters" class="input" rows="4"></textarea>
-      </td>
-      <td>
-        <label>TEXTAREA ERROR</label>
-        <textarea placeholder="Minimum 120 characters" class="input input--alert" rows="4"></textarea>
-      </td>
-      <td>
-        <label>TEXTAREA DISABLED</label>
-        <textarea placeholder="Minimum 120 characters" class="input input--disabled" rows="4"></textarea>
-      </td>
-    </tr>
-  </table>
-  <br/>
-  <br/>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--6">
+      <div class="alert alert--success">
+        <b class="text text--success">Eureka!</b> Everything looks good
+        <div class="alert__close alert--success__close">
+          <i class="fa fa-close"></i>
+        </div>
+      </div>
+    </div>
+    <div class="grid__item grid__item--6">
+      <div class="alert__invert alert__invert--success">
+        <b class="text">Eureka!</b> Everything looks good
+        <div class="alert__invert__close">
+          <i class="fa fa-close"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--6">
+      <div class="alert alert--alert">
+        <b class="text text--alert">Houston!</b> We have a problem
+        <div class="alert__close alert--alert__close">
+          <i class="fa fa-close"></i>
+        </div>
+      </div>
+    </div>
+    <div class="grid__item grid__item--6">
+      <div class="alert__invert alert__invert--alert">
+        <b class="text">Houston!</b> We have a problem
+        <div class="alert__invert__close">
+          <i class="fa fa-close"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--6">
+      <div class="alert alert--warning">
+        <b class="text text--warning">Warning!</b> You are about to delete
+        <div class="alert__close alert--warning__close">
+          <i class="fa fa-close"></i>
+        </div>
+      </div>
+    </div>
+    <div class="grid__item grid__item--6">
+      <div class="alert__invert alert__invert--warning">
+        <b class="text">Warning!</b> You are about to delete
+        <div class="alert__invert__close">
+          <i class="fa fa-close"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>GRID</h1>
+  <div class="grid">
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+    <div class="col grid__item grid__item--1">.col-1</div>
+  </div>
+  <div class="grid">
+    <div class="col grid__item grid__item--2">.col-2</div>
+    <div class="col grid__item grid__item--2">.col-2</div>
+    <div class="col grid__item grid__item--2">.col-2</div>
+    <div class="col grid__item grid__item--2">.col-2</div>
+    <div class="col grid__item grid__item--2">.col-2</div>
+    <div class="col grid__item grid__item--2">.col-2</div>
+  </div>
+  <div class="grid">
+    <div class="col grid__item grid__item--3">.col-3</div>
+    <div class="col grid__item grid__item--3">.col-3</div>
+    <div class="col grid__item grid__item--3">.col-3</div>
+    <div class="col grid__item grid__item--3">.col-3</div>
+  </div>
+  <div class="grid">
+    <div class="col grid__item grid__item--4">.col-4</div>
+    <div class="col grid__item grid__item--4">.col-4</div>
+    <div class="col grid__item grid__item--4">.col-4</div>
+  </div>
+  <div class="grid">
+    <div class="col grid__item grid__item--6">.col-6</div>
+    <div class="col grid__item grid__item--6">.col-6</div>
+  </div>
+  <div class="grid">
+    <div class="col grid__item grid__item--12">.col-12</div>
+  </div>
 </body>
 
 </html>

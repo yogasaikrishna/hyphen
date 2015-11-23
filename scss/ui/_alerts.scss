@@ -1,0 +1,86 @@
+// Alert styles
+
+// Alert text color
+$alert-font-color: #7f8c8d !default;
+
+// Alert radius
+$alert-border-radius: 3px;
+
+// Padding
+$alert-padding: 12px;
+
+@mixin base-alert($type) {
+  border-radius: $alert-border-radius;
+  @if $type == normal {
+    color: $alert-font-color;
+  } @else {
+    color: $white;
+  }
+  font-size: map-get($base-sizes, default);
+  padding-bottom: $alert-padding;
+  padding-left: $alert-padding;
+  padding-top: $alert-padding;
+  width: 98%;
+}
+
+// Alert border and background
+@mixin alert-style($background, $type) {
+  @if $type == normal {
+    background: scale-color($background, $lightness: 90%);
+    border: 1px solid lighten($background, 25%);
+  } @else {
+    background: $background;
+    border: 1px solid $background;
+  }
+}
+
+// Close button style
+@mixin alert-close {
+  cursor: pointer;
+  display: inline;
+  float: right;
+  padding-right: $alert-padding;
+}
+
+// Close button color
+@mixin alert-close-style($color) {
+  color: $color;
+}
+
+// Generates styles for alert
+.alert {
+  @include base-alert(normal);
+
+  // Generates alerts in different colors
+  @each $name, $color in $hyphen-colors {
+    @at-root #{&}--#{$name} {
+      @include alert-style($color, normal);
+    }
+
+    // Alert close in different colors
+    @at-root #{&}--#{$name}__close {
+      @include alert-close-style($color);
+    }
+  }
+
+  // Default alert close
+  @at-root #{&}__close {
+    @include alert-close;
+  }
+}
+
+.alert__invert {
+  @include base-alert(invert);
+
+  // Generates alerts in different colors
+  @each $name, $color in $hyphen-colors {
+    @at-root #{&}--#{$name} {
+      @include alert-style($color, invert);
+    }
+  }
+
+  // Default alert close
+  @at-root #{&}__close {
+    @include alert-close;
+  }
+}
