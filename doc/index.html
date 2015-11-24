@@ -18,6 +18,7 @@
 </head>
 
 <body>
+  <!-- Button components -->
   <h1>BUTTONS</h1>
   <div class="grid">
     <div class="grid__item grid__item--2">&nbsp;</div>
@@ -119,28 +120,30 @@
       <button class="btn btn--alert btn--large btn--round">ALERT</button>
     </div>
   </div>
+
+  <!-- Forms -->
   <h1>FORMS</h1>
   <div class="grid">
     <div class="grid__item grid__item--3">
       <label class="label">INPUT DEFAULT</label>
-      <input type="text" class="input" placeholder="Placeholder"/>
+      <input type="text" class="input" placeholder="Placeholder" />
     </div>
     <div class="grid__item grid__item--3">
       <label class="label">INPUT ERROR</label>
-      <input type="text" class="input input--alert" value="Some value"/>
+      <input type="text" class="input input--alert" value="Some value" />
     </div>
     <div class="grid__item grid__item--3">
       <label class="label">ICON INPUT</label>
       <div class="input-icon input-icon--left">
         <i class="fa fa-lock input-icon__icon"></i>
-        <input type="password" class="input input-icon__input" placeholder="Password"/>
+        <input type="password" class="input input-icon__input" placeholder="Password" />
       </div>
     </div>
     <div class="grid__item grid__item--3">
       <label class="label">ICON INPUT RIGHT</label>
       <div class="input-icon input-icon--right">
         <i class="fa fa-search input-icon__icon"></i>
-        <input type="search" class="input input-icon__input" placeholder="Search"/>
+        <input type="search" class="input input-icon__input" placeholder="Search" />
       </div>
     </div>
   </div>
@@ -188,6 +191,8 @@
       <textarea disabled placeholder="Minimum 120 characters" class="input input--disabled" rows="4"></textarea>
     </div>
   </div>
+
+  <!-- Alerts -->
   <h1>ALERTS</h1>
   <div class="grid">
     <div class="grid__item grid__item--6">
@@ -261,6 +266,8 @@
       </div>
     </div>
   </div>
+
+  <!-- Grid -->
   <h1>GRID</h1>
   <div class="grid">
     <div class="col grid__item grid__item--1">.col-1</div>
@@ -300,8 +307,201 @@
     <div class="col grid__item grid__item--6">.col-6</div>
   </div>
   <div class="grid">
+    <div class="col grid__item grid__item--7">.col-7</div>
+    <div class="col grid__item grid__item--5">.col-5</div>
+  </div>
+  <div class="grid">
     <div class="col grid__item grid__item--12">.col-12</div>
   </div>
+
+  <!-- Table -->
+  <h1>TABLES</h1>
+  <h3>TABLE DEFAULT</h3>
+  <div class="grid">
+    <div class="grid__item grid__item--12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>DOB</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Yogasaikrishna</td>
+            <td>Koneru</td>
+            <td>02-08-1990</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bharat</td>
+            <td>Athota</td>
+            <td>06-02-1991</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Vinod Krishna</td>
+            <td>Gunakala</td>
+            <td>18-04-1992</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <h3>TABLE STRIPED</h3>
+  <div class="grid">
+    <div class="grid__item grid__item--12">
+      <table class="table table--striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>DOB</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Yogasaikrishna</td>
+            <td>Koneru</td>
+            <td>02-08-1990</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bharat</td>
+            <td>Athota</td>
+            <td>06-02-1991</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Vinod Krishna</td>
+            <td>Gunakala</td>
+            <td>18-04-1992</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <h3>TABLE HOVER</h3>
+  <div class="grid">
+    <div class="grid__item grid__item--12">
+      <table class="table table--hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>DOB</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Yogasaikrishna</td>
+            <td>Koneru</td>
+            <td>02-08-1990</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bharat</td>
+            <td>Athota</td>
+            <td>06-02-1991</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Vinod Krishna</td>
+            <td>Gunakala</td>
+            <td>18-04-1992</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <h3>TABLE BORDERED</h3>
+  <div class="grid">
+    <div class="grid__item grid__item--12">
+      <table class="table table--bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>DOB</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Yogasaikrishna</td>
+            <td>Koneru</td>
+            <td>02-08-1990</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bharat</td>
+            <td>Athota</td>
+            <td>06-02-1991</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Vinod Krishna</td>
+            <td>Gunakala</td>
+            <td>18-04-1992</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <h3>TABLE RESPONSIVE</h3>
+  <div class="grid">
+    <div class="grid__item grid__item--12">
+      <div class="table-responsive">
+        <table class="table table--responsive">
+          <thead>
+            <tr>
+              <th data-type="number">#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>DOB</th>
+              <th>Mobile</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-type="number">1</td>
+              <td>Yogasaikrishna</td>
+              <td>Koneru</td>
+              <td>02-08-1990</td>
+              <td>9030640279</td>
+              <td>saikrishna@finday.com</td>
+            </tr>
+            <tr>
+              <td data-type="number">2</td>
+              <td>Bharat</td>
+              <td>Athota</td>
+              <td>06-02-1991</td>
+              <td>9000429390</td>
+              <td>abharat@finday.com</td>
+            </tr>
+            <tr>
+              <td data-type="number">3</td>
+              <td>Vinod Krishna</td>
+              <td>Gunakala</td>
+              <td>18-04-1992</td>
+              <td>8977778830</td>
+              <td>vinod@finday.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>

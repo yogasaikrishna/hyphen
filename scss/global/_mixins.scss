@@ -1,0 +1,17 @@
+// Generic mixins
+
+$default-border-width: 1px;
+
+// Mixin to add border
+@mixin add-border(
+  $position: null,
+  $width: $default-border-width,
+  $style: solid,
+  $color: $base-border-color
+) {
+  @if $position == null {
+    border: $width $style $color;
+  } @else {
+    border-#{$position}: $width $style $color;
+  }
+}

@@ -4,13 +4,16 @@
 $grid-columns: 12 !default;
 
 // Max container width
-$grid-width: 78rem !default;
+$grid-width: 95% !default;
 
 // Column gutter
-$grid-column-gutter: .5rem !default;
+$grid-column-gutter: .75% !default;
 
 // Grid Spacing
 $grid-spacing: .875em;
+
+// Responsive column margin
+$grid-column-spacing: .5em;
 
 @mixin grid {
   max-width: $grid-width;
@@ -32,11 +35,52 @@ $grid-spacing: .875em;
   }
 }
 
+// Media query for grid
+@mixin grid-media-query($media) {
+  @media only screen and #{$media} {
+    @content;
+  }
+}
+
 // Mixin to generate grid columns
 @mixin grid-columns {
-  @for $i from 1 through $grid-columns {
-    @at-root #{&}--#{$i} {
-      width: $grid-width / 12 * $i - $grid-column-gutter;
+  // Iterate through all breakpoints i.e mobile, tablet, laptop, desktop
+  @each $name, $media in $breakpoints {
+    @include grid-media-query($media) {
+      @for $i from 1 through $grid-columns {
+        @if $name == mobile {
+          // Adjust layout to Mobile size
+          @at-root #{&}--#{$i} {
+            margin-top: $grid-column-spacing;
+            width: 100%;
+          }
+        } @else if $name == tablet {
+          // Adjust layout to Tablet size
+          @at-root #{&}--#{$i} {
+            margin-top: $grid-column-spacing;
+            @if $i <= 6 {
+              width: 50% - $grid-column-gutter;
+            } @else {
+              width: 100%;
+            }
+          }
+        } @else if $name == laptop {
+          // Adjust layout to Laptop size
+          @at-root #{&}--#{$i} {
+            margin-top: $grid-column-spacing;
+            @if $i <= 3 {
+              width: 33.33% - $grid-column-gutter;
+            } @else {
+              width: 100% / 12 * $i - $grid-column-gutter;
+            }
+          }
+        } @else {
+          // Adjust layout to Desktop size
+          @at-root #{&}--#{$i} {
+            width: 100% / 12 * $i - $grid-column-gutter;
+          }
+        }
+      }
     }
   }
 }

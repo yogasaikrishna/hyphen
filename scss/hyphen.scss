@@ -3,7 +3,8 @@
 // Third party library
 @import 'vendor/normalize';
 
-@import 'settings';
+@import 'global/settings';
+@import 'global/mixins';
 
 // UI components in Hyphen
 @import 'ui/alerts';

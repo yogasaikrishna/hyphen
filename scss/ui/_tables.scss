@@ -1,1 +1,85 @@
 // Table styles
+
+// Table width
+$table-width: 100% !default;
+
+// Table header border color
+$table-border-color: lighten($base-border-color, 15%);
+
+// Row banding color
+$table-stripe-color: #f4f5f6;
+
+// Padding
+$table-cell-padding: 10px;
+
+// Table cell content types
+$table-content-types: (string, number, date) !default;
+
+@mixin table {
+  width: $table-width;
+
+  thead {
+    border-bottom: 2px solid $table-border-color;
+  }
+
+  tr {
+    border-bottom: 1px solid $table-border-color;
+  }
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    text-align: justify;
+  }
+
+  @include cell-content-style;
+
+  @at-root #{&}--striped {
+    tbody tr:nth-of-type(odd) {
+      background-color: $table-stripe-color;
+    }
+  }
+
+  @at-root #{&}--hover {
+    tbody tr:hover {
+      background-color: $table-stripe-color;
+    }
+  }
+
+  @at-root #{&}--bordered {
+    th,
+    td {
+      border: 1px solid $table-border-color;
+    }
+  }
+
+  @at-root #{&}--responsive {
+    th,
+    td {
+      white-space: nowrap;
+    }
+  }
+}
+
+// Mixin to change text alignment based on content type
+@mixin cell-content-style {
+  @each $type in $table-content-types {
+    th[data-type="#{$type}"],
+    td[data-type="#{$type}"] {
+      @if $type == number {
+        text-align: right;
+      } @else {
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.table {
+  @include table;
+
+  @at-root #{&}-responsive {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
