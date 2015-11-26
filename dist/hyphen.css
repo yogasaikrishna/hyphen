@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -542,6 +542,10 @@ th {
   border-radius: 3px;
 }
 
+.btn--full {
+  width: 100%;
+}
+
 .btn--primary {
   background: #3498db;
   color: #fff;
@@ -995,6 +999,32 @@ input[type="search"] {
   overflow-x: scroll;
 }
 
+.tabs__header {
+  border-bottom: 1px solid #dee1e3;
+}
+
+.tabs__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs__menu__item {
+  color: #69878f;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-align: center;
+  transition: border-color .5s ease;
+}
+
+.tabs__menu__item--selected {
+  border-bottom: 5px solid #3498db;
+  color: #34495e;
+  font-weight: 600;
+}
+
 .text {
   font-size: 0.9rem;
 }
@@ -1035,6 +1065,6 @@ input[type="search"] {
   color: #f39c12;
 }
 
-h1, h2, h3, h4, h5, h6, label, button, table, textarea, input, select {
+h1, h2, h3, h4, h5, h6, label, button, table, textarea, input, select, ul, li {
   font-family: "Source Sans Pro", sans-serif;
 }

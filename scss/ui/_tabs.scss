@@ -1,0 +1,36 @@
+// Tab styles
+
+$tab-selected-color: $base-blue !default;
+$tab-item-padding: 10px;
+
+@mixin tabs {
+  @at-root #{&}__header {
+    @include add-border(bottom, 1px, $color: lighten($base-border-color, 12%));
+  }
+
+  @at-root #{&}__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @at-root #{&}__item {
+      color: darken($base-white, 45%);
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 400;
+      padding: $tab-item-padding 2 * $tab-item-padding;
+      text-align: center;
+      transition: border-color .5s ease;
+
+      @at-root #{&}--selected {
+        @include add-border(bottom, 5px, $color: $base-blue);
+        color: $base-black;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.tabs {
+  @include tabs;
+}

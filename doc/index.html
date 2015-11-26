@@ -3,6 +3,7 @@
 
 <head>
   <title>Hyphen CSS Framework</title>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/hyphen.css">
   <style type="text/css">
@@ -13,6 +14,10 @@
     .col {
       background: #ebf5fb;
       padding: 10px;
+    }
+
+    .tab-content {
+      padding: 100px;
     }
   </style>
 </head>
@@ -118,6 +123,23 @@
     </div>
     <div class="grid__item grid__item--2">
       <button class="btn btn--alert btn--large btn--round">ALERT</button>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid__item grid__item--2">
+      <label class="label">FULL WIDTH</label>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--primary btn--tiny btn--round btn--full">PRIMARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--secondary btn--small btn--round btn--full">SECONDARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--tertiary btn btn--round btn--full">TERTIARY</button>
+    </div>
+    <div class="grid__item grid__item--2">
+      <button class="btn btn--alert btn--large btn--round btn--full">ALERT</button>
     </div>
   </div>
 
@@ -502,6 +524,34 @@
     </div>
   </div>
 
+  <!-- Tabs -->
+  <h1>TABS</h1>
+  <div class="grid">
+    <div class="grid__item grid__item--12">
+      <div class="tabs">
+        <div class="tabs__header">
+          <ul class="tabs__menu">
+            <li class="tabs__menu__item">
+              TAB 1
+            </li>
+            <li class="tabs__menu__item tabs__menu__item--selected">
+              TAB 2
+            </li>
+            <li class="tabs__menu__item">
+              TAB 3
+            </li>
+            <li class="tabs__menu__item">
+              TAB 4
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__content tab-content">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

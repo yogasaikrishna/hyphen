@@ -70,6 +70,9 @@ $button-sizes: $base-sizes !default;
   // Button with round corners
   @at-root #{&}--round { border-radius: $button-radius; }
 
+  // Button full width
+  @at-root #{&}--full { width: 100%; }
+
   // Button styles with all colors
   @each $name, $color in $hyphen-colors {
     @at-root #{&}--#{$name} {
