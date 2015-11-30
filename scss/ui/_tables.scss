@@ -79,7 +79,7 @@ $table-content-types: (string, number, date) !default;
   @include table;
 
   @at-root #{&}-responsive {
+    overflow-x: auto;
     width: 100%;
-    overflow-x: scroll;
   }
 }

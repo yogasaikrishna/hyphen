@@ -15,3 +15,28 @@ $default-border-width: 1px;
     border-#{$position}: $width $style $color;
   }
 }
+
+@mixin add-triangle(
+  $size,
+  $color,
+  $direction
+) {
+  border: $size solid;
+  content: '';
+  // display: block;
+  // height: 0;
+  width: 0;
+
+  @if ($direction == top) {
+    border-color: transparent transparent $color;
+  }
+  @if ($direction == right) {
+    border-color: transparent transparent transparent $color;
+  }
+  @if ($direction == bottom) {
+    border-color: $color transparent transparent;
+  }
+  @if ($direction == left) {
+    border-color: transparent $color transparent transparent;
+  }
+}
