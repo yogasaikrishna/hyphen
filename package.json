@@ -1,6 +1,6 @@
 {
   "name": "hyphen",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Hyphen is a CSS Framework",
   "main": "index.js",
   "directories": {
