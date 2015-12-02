@@ -23,8 +23,8 @@ $default-border-width: 1px;
 ) {
   border: $size solid;
   content: '';
-  // display: block;
-  // height: 0;
+  display: block;
+  height: 0;
   width: 0;
 
   @if ($direction == top) {

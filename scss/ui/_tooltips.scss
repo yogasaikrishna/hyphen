@@ -1,86 +1,61 @@
 // Tooltip styles
 
 $tooltip-padding: 7px;
-$tooltip-border-radius: 3px;
+$tooltip-border-radius: 6px;
 $tooltip-font-size: 14px;
+$tooltip-color: darken($base-black, 10%);
 
 @mixin tooltip {
+  background: $tooltip-color;
+  border-radius: $tooltip-border-radius;
+  color: $white;
+  display: none;
+  font-size: $tooltip-font-size;
+  min-height: 1.35em;
+  line-height: 1.35em;
+  min-width: 160px;
+  padding: 5px;
   position: absolute;
-  z-index: 2;
-
-  &:before,
-  &:after {
-    opacity: 0;
-    position: absolute;
-    visibility: hidden;
-  }
+  text-align: center;
 
   @at-root #{&}--top {
-    &:before {
-      bottom: 100%;
-      left: 50%;
-    }
-
     &:after {
-      @include add-triangle(8px, $base-black, bottom);
-      bottom: 100%;
-      left: -55px;
+      @include add-triangle(8px, $tooltip-color, bottom);
+      left: 50%;
+      margin-left: -8px;
+      position: absolute;
+      top: 100%;
     }
   }
 
   @at-root #{&}--right {
-    position: relative;
-
     &:after {
-      bottom: 100%;
-    }
-
-    &:before {
-      @include add-triangle(8px, $base-black, left);
-      right: 80px;
-      top: 8px;
+      @include add-triangle(8px, $tooltip-color, left);
+      margin-top: -8px;
+      position: absolute;
+      right: 100%;
+      top: 50%;
     }
   }
 
   @at-root #{&}--bottom {
-    bottom: -100%;
-    right: 50%;
-
     &:after {
-      @include add-triangle(8px, $base-black, top);
-      bottom: 0;
+      @include add-triangle(8px, $tooltip-color, top);
+      bottom: 100%;
+      left: 50%;
+      margin-left: -8px;
+      position: absolute;
     }
   }
 
   @at-root #{&}--left {
-    left: -135%;
-    top: -35px;
-
     &:after {
-      @include add-triangle(8px, $base-black, right);
-      right: -110px;
-      top: 8px;
+      @include add-triangle(8px, $tooltip-color, right);
+      left: 100%;
+      margin-top: -8px;
+      position: absolute;
+      top: 50%;
     }
-  }
-
-  &:after {
-    background: $base-black;
-    border-radius: $tooltip-border-radius;
-    color: $white;
-    content: attr(data-title);
-    font-size: $tooltip-font-size;
-    line-height: 1.2em;
-    margin-bottom: 15px;
-    margin-left: -80px;
-    min-width: 160px;
-    padding: $tooltip-padding;
-    text-align: center;
-  }
-
-  &:before {
-    font-size: 0;
-    line-height: 0;
-    margin-left: -5px;
   }
 }
 
@@ -92,10 +67,36 @@ $tooltip-font-size: 14px;
   }
 
   &:hover {
-    .tooltip:before,
-    .tooltip:after {
-      opacity: 1;
-      visibility: visible;
+    .tooltip {
+      display: block;
+      opacity: .8;
+      z-index: 999;
+    }
+
+    .tooltip--top {
+      bottom: 150%;
+      left: 50%;
+      margin-left: -80px;
+    }
+
+    .tooltip--right {
+      left: 100%;
+      margin-left: 15px;
+      margin-top: -1.35em;
+      top: 50%;
+    }
+
+    .tooltip--bottom {
+      left: 50%;
+      margin-left: -80px;
+      top: 150%;
+    }
+
+    .tooltip--left {
+      margin-right: 15px;
+      margin-top: -1.35em;
+      right: 100%;
+      top: 50%;
     }
   }
 }
