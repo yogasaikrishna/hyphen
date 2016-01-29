@@ -1,0 +1,139 @@
+.header {
+  background: #3498db;
+  color: white;
+  font-family: ff-clan-web-pro-wide,"Helvetica Neue",Helvetica,sans-serif;
+  height: 150px;
+  font-size: 60px;
+  font-weight: 400;
+  padding-top: 45px;
+  text-align: center;
+}
+
+.fixheader {
+  background: #3498db;
+  color: white;
+  font-family: ff-clan-web-pro-wide,"Helvetica Neue",Helvetica,sans-serif;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 200;
+  padding-top: 8px;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 55px;
+  font-weight: 100;
+  font-family: ff-clan-web-pro-wide,"Helvetica Neue",Helvetica,sans-serif;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#hyphenid {
+  margin-left: 70px;
+  padding-left: 10px;
+}
+
+.fixindex {
+  position: fixed;
+  top: 40px;
+}
+
+hr {
+  color:#ecf0f1;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  opacity: 0.5;
+}
+
+.nav a {
+  color: grey;
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding-left: 20px;
+  text-decoration: none;
+  line-height: 200%;
+}
+
+.nav a:hover {
+  color: purple;
+  border-left: 1px solid purple;
+}
+
+.nav a.addcolor {
+  color: purple;
+  border-left: 2px solid purple;
+}
+
+.tag {
+  color: #2980b9;
+}
+
+.comments {
+  color: #998;
+  padding-left: 15px;
+}
+
+.attr {
+  color: #1abc9c;
+}
+
+.attrvalue {
+  color: #e74c3c;
+}
+
+.samplecode {
+  background: #fffce6;
+  border-top: 1px solid #dadfe1;
+  font-family: "Menlo","Consolas",Monaco,monospace,serif;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 200%;
+  overflow: auto;
+  padding-left: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  white-space: nowrap;
+}
+
+.innerhtml {
+  font-size: 13px;
+}
+
+.description {
+  font-size: 16px;
+  font-family: ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
+  font-weight: 200;
+  font-weight: lighter;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.docheading {
+  font-family: ff-clan-web-pro-wide,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 28px;
+  font-weight: lighter;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.title {
+  padding-top: 8px;
+  font-size: 15px;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+.classtitle {
+  border: 1px solid black;
+  border-radius: 3px;
+  font-family: ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
+  font-weight: 400;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: auto;
+  margin-right: 3px;
+}

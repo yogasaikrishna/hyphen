@@ -1170,3 +1170,276 @@ input[type="search"] {
 h1, h2, h3, h4, h5, h6, label, button, table, textarea, input, select, ul, li {
   font-family: "Source Sans Pro", sans-serif;
 }
+
+.toggle {
+  display: inline-flex;
+  padding: 1px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.toggle--tiny {
+  width: 44px;
+}
+
+.toggle--tiny .switch {
+  width: 17px;
+  right: -27px;
+}
+
+.toggle--small {
+  width: 53px;
+}
+
+.toggle--small .switch {
+  width: 22px;
+  right: -31px;
+}
+
+.toggle--default {
+  width: 62px;
+}
+
+.toggle--default .switch {
+  width: 26px;
+  right: -36px;
+}
+
+.toggle--large {
+  width: 73px;
+}
+
+.toggle--large .switch {
+  width: 29px;
+  right: -44px;
+}
+
+.toggle--tiny {
+  height: 17px;
+}
+
+.toggle--small {
+  height: 21px;
+}
+
+.toggle--default {
+  height: 25px;
+}
+
+.toggle--large {
+  height: 29px;
+}
+
+.toggle .checkbox {
+  display: none;
+}
+
+.toggle__off {
+  background: #dadada;
+}
+
+.toggle__on--primary {
+  background: #3498db;
+}
+
+.toggle__on--secondary {
+  background: #34495e;
+}
+
+.toggle__on--tertiary {
+  background: #ecf0f1;
+}
+
+.toggle__on--success {
+  background: #2ecc71;
+}
+
+.toggle__on--alert {
+  background: #e74c3c;
+}
+
+.toggle__on--tiny {
+  width: 44px;
+}
+
+.toggle__on--tiny .switch {
+  width: 17px;
+  right: -27px;
+}
+
+.toggle__on--small {
+  width: 53px;
+}
+
+.toggle__on--small .switch {
+  width: 22px;
+  right: -31px;
+}
+
+.toggle__on--default {
+  width: 62px;
+}
+
+.toggle__on--default .switch {
+  width: 26px;
+  right: -36px;
+}
+
+.toggle__on--large {
+  width: 73px;
+}
+
+.toggle__on--large .switch {
+  width: 29px;
+  right: -44px;
+}
+
+.toggle__on .switch {
+  animation-name: toggle-switchOn;
+  animation-duration: 0.05s;
+  position: relative;
+}
+
+@keyframes toggle-switchOn {
+  0% {
+    position: relative;
+    right: -5px;
+  }
+  25% {
+    position: relative;
+    right: -10px;
+  }
+  50% {
+    position: relative;
+  }
+  100% {
+    position: relative;
+    right: -20px;
+  }
+}
+
+.switch {
+  background: #fff;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+@keyframes rectangular-toggle {
+  0% {
+    left: 50%;
+  }
+  25% {
+    left: 30%;
+  }
+  50% {
+    left: 10%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.toggle__rectangle {
+  display: inline-flex;
+  padding: 1px;
+  border: 1px solid #a9a9a9;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0;
+}
+
+.toggle__rectangle--tiny {
+  height: 17px;
+}
+
+.toggle__rectangle--small {
+  height: 21px;
+}
+
+.toggle__rectangle--default {
+  height: 25px;
+}
+
+.toggle__rectangle--large {
+  height: 29px;
+}
+
+.toggle__rectangle--tiny {
+  width: 44px;
+}
+
+.toggle__rectangle--tiny .switch {
+  width: 17px;
+  right: -27px;
+}
+
+.toggle__rectangle--small {
+  width: 53px;
+}
+
+.toggle__rectangle--small .switch {
+  width: 22px;
+  right: -31px;
+}
+
+.toggle__rectangle--default {
+  width: 62px;
+}
+
+.toggle__rectangle--default .switch {
+  width: 26px;
+  right: -36px;
+}
+
+.toggle__rectangle--large {
+  width: 73px;
+}
+
+.toggle__rectangle--large .switch {
+  width: 29px;
+  right: -44px;
+}
+
+.toggle__rectangle--primary .switch__rectangle--on {
+  background: #3498db;
+}
+
+.toggle__rectangle--secondary .switch__rectangle--on {
+  background: #34495e;
+}
+
+.toggle__rectangle--tertiary .switch__rectangle--on {
+  background: #ecf0f1;
+}
+
+.toggle__rectangle--success .switch__rectangle--on {
+  background: #2ecc71;
+}
+
+.toggle__rectangle--alert .switch__rectangle--on {
+  background: #e74c3c;
+}
+
+.toggle__rectangle .checkbox {
+  display: none;
+}
+
+.toggle__rectangle .switch__rectangle {
+  cursor: pointer;
+}
+
+.toggle__rectangle .switch__rectangle--on {
+  animation-name: rectangular-toggle;
+  animation-duration: 0.05s;
+  left: 0%;
+  position: relative;
+  width: 50%;
+}
+
+.toggle__rectangle .switch__rectangle--off {
+  background: #dadada;
+  left: 50%;
+  position: relative;
+  width: 50%;
+}

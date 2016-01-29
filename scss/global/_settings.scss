@@ -45,3 +45,41 @@ $breakpoints: (
   laptop: '(min-width: 1025px) and (max-width: 1200px)',
   desktop: '(min-width: 1201px)',
 );
+
+$border-radius: 100px !default;
+$color: #c0c0c0 !default;
+
+//height of switch component
+$switch-height: (
+  tiny: 17px,
+  small: 21px,
+  default: 25px,
+  large: 29px
+) !default;
+
+//width of entire switch component
+$component-width: (
+  tiny: 44px,
+  small: 53px,
+  default: 62px,
+  large: 73px
+) !default;
+
+//width of switch in toggle component
+$switch-width: (
+  tiny: 17px,
+  small: 22px,
+  default: 26px,
+  large: 29px
+) !default;
+
+//position of switch when it's in off state
+$switch-position: (
+  tiny: -27px,
+  small: -31px,
+  default: -36px,
+  large: -44px
+) !default;
+
+// Background color for switch
+$switchbackground: $white;

@@ -1,0 +1,182 @@
+$switch-border: 1px solid #a9a9a9;
+
+//styling for entire switch component
+@mixin component {
+  display: inline-flex;
+  padding: 1px;
+}
+// Mixin to set background for each switch type when on
+@mixin background-color {
+  @at-root #{&}--primary {
+    background: map-get($hyphen-colors, primary);
+  };
+  @at-root #{&}--secondary {
+    background: map-get($hyphen-colors, secondary);
+  };
+  @at-root #{&}--tertiary {
+    background: map-get($hyphen-colors, tertiary);
+  };
+  @at-root #{&}--success {
+    background: map-get($hyphen-colors, success);
+  };
+  @at-root #{&}--alert {
+    background: map-get($hyphen-colors, alert);
+  };
+}
+
+@mixin switch-background-color {
+  @at-root #{&}--primary {
+    .switch__rectangle--on {
+      background: map-get($hyphen-colors, primary);
+    }
+  };
+  @at-root #{&}--secondary {
+    .switch__rectangle--on {
+      background: map-get($hyphen-colors, secondary);
+      }
+  };
+  @at-root #{&}--tertiary {
+    .switch__rectangle--on {
+      background: map-get($hyphen-colors, tertiary);
+      }
+  };
+  @at-root #{&}--success {
+    .switch__rectangle--on {
+      background: map-get($hyphen-colors, success);
+      }
+  };
+  @at-root #{&}--alert {
+    .switch__rectangle--on {
+      background: map-get($hyphen-colors, alert);
+      }
+  };
+}
+
+//Total width of toggle button
+@mixin component-width {
+  @at-root #{&}--tiny {
+    width: map-get($component-width, tiny);
+    .switch {
+      width: map-get($switch-width, tiny);
+      right: map-get($switch-position, tiny);
+    }
+  };
+  @at-root #{&}--small {
+    width: map-get($component-width, small);
+    .switch {
+      width: map-get($switch-width, small);
+      right: map-get($switch-position, small);
+    }
+  };
+  @at-root #{&}--default {
+    width: map-get($component-width, default);
+    .switch {
+      width:map-get($switch-width, default);
+      right: map-get($switch-position, default);
+    }
+  };
+  @at-root #{&}--large {
+    width: map-get($component-width, large);
+    .switch {
+      width:map-get($switch-width, large);
+      right: map-get($switch-position, large);;
+    }
+  };
+}
+
+// Mixin to set height and font-size of toggle component
+@mixin toggle-height {
+  @include component;
+  @at-root #{&}--tiny {
+    height: map-get($switch-height, tiny);
+  };
+  @at-root #{&}--small {
+    height: map-get($switch-height, small);
+  };
+  @at-root #{&}--default {
+    height: map-get($switch-height, default);
+  };
+  @at-root #{&}--large {
+    height: map-get($switch-height, large);
+  };
+}
+.toggle {
+  @include component-width;
+  @include toggle-height;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  .checkbox {
+      display: none;
+    }
+
+  @at-root #{&}__off {
+    background: lighten($color, 10%);
+  }
+
+  @at-root #{&}__on {
+    @include background-color;
+    @include component-width;
+    .switch {
+      animation-name: toggle-switchOn;
+      animation-duration: 0.05s;
+      position: relative;
+    }
+  }
+}
+
+// Animation for sliding switch
+@keyframes toggle-switchOn {
+  0% { position: relative; right: -5px; }
+  25% {position: relative; right: -10px; }
+  50% {position: relative; $right: -15px; }
+  100% {position: relative; right: -20px; }
+}
+
+.switch {
+    background: $switchbackground;
+    border-radius: $border-radius;
+    cursor: pointer;
+  }
+
+@keyframes rectangular-toggle {
+  0% { left: 50%; }
+  25% { left: 30%; }
+  50% { left: 10%; }
+  100% { left: 0%; }
+}
+
+
+.toggle__rectangle {
+  @include toggle-height;
+  @include component-width;
+  @include  switch-background-color;
+  border: $switch-border;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0;
+
+  .checkbox {
+      display: none;
+    }
+
+  .switch__rectangle {
+    cursor: pointer;
+
+    @at-root #{&}--on {
+      animation-name: rectangular-toggle;
+      animation-duration: 0.05s;
+      left: 0%;
+      position: relative;
+      width: 50%;
+    }
+
+    @at-root #{&}--off {
+      background: lighten($color, 10%);
+      left: 50%;
+      position: relative;
+      width: 50%;
+    }
+  }
+}
