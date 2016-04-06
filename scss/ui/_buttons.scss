@@ -39,12 +39,12 @@ $button-sizes: $base-sizes !default;
   $color: $button-color
 ) {
   @if $background-hover == auto {
-    $background-hover: scale-color($background, $lightness: 20%);
+    $background-hover: scale-color($background, $lightness: 10%);
   }
 
   @if lightness($background) >= 70% {
     $color: $button-alt-color;
-    $background-hover: scale-color($background, $lightness: -10%);
+    $background-hover: $white;
     border-color: $button-border-color;
   } @else {
     $color: $button-color;
