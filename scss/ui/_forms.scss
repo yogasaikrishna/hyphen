@@ -27,6 +27,7 @@ $input-box-shadow: 0 0 3px;
 
 // Mixin for form elements
 @mixin form-element {
+  background: darken($white, 1%);
   border: $input-border;
   border-radius: 3px;
   box-sizing: border-box;

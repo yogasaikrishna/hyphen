@@ -27,6 +27,7 @@ $button-sizes: $base-sizes !default;
   font-size: map-get($button-sizes, default);
   line-height: 1;
   margin: $button-margin;
+  outline: 0;
   padding: $button-padding;
   text-align: center;
   transition: all .25s ease-out;
@@ -44,18 +45,32 @@ $button-sizes: $base-sizes !default;
 
   @if lightness($background) >= 70% {
     $color: $button-alt-color;
-    $background-hover: $white;
-    border-color: $button-border-color;
+    $background-hover: darken($white, 2%);
+    border-color: lighten($button-border-color, 13%);
   } @else {
     $color: $button-color;
   }
 
   background: $background;
+  box-shadow: 0 2px 0 darken($background, 5%);
   color: $color;
+  transition: all .1s ease-in-out;
 
   &:hover,
   &:focus {
     background: $background-hover;
+    transform: scale(1.02);
+  }
+
+  @at-root #{&}--invert {
+    background: $white;
+    border: 1px solid $background;
+    color: $background;
+
+    &:hover {
+      background: $background;
+      color: $white;
+    }
   }
 }
 
