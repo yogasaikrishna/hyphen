@@ -704,6 +704,10 @@ th {
   box-shadow: 0 0 3px #1fbad6;
 }
 
+.input:focus + .input-icon__icon {
+  color: #1fbad6;
+}
+
 .input--primary {
   border-color: #1fbad6;
   box-shadow: 0 0 3px #1fbad6;
@@ -712,6 +716,10 @@ th {
 .input--primary:focus {
   border-color: #1fbad6;
   box-shadow: 0 0 3px #1fbad6;
+}
+
+.input--primary:focus + .input-icon__icon {
+  color: #1fbad6;
 }
 
 .input--secondary {
@@ -724,6 +732,10 @@ th {
   box-shadow: 0 0 3px #34495e;
 }
 
+.input--secondary:focus + .input-icon__icon {
+  color: #1fbad6;
+}
+
 .input--tertiary {
   border-color: #fff;
   box-shadow: 0 0 3px #fff;
@@ -732,6 +744,10 @@ th {
 .input--tertiary:focus {
   border-color: #fff;
   box-shadow: 0 0 3px #fff;
+}
+
+.input--tertiary:focus + .input-icon__icon {
+  color: #1fbad6;
 }
 
 .input--success {
@@ -744,6 +760,10 @@ th {
   box-shadow: 0 0 3px #3dc269;
 }
 
+.input--success:focus + .input-icon__icon {
+  color: #1fbad6;
+}
+
 .input--alert {
   border-color: #ca3b27;
   box-shadow: 0 0 3px #ca3b27;
@@ -754,6 +774,10 @@ th {
   box-shadow: 0 0 3px #ca3b27;
 }
 
+.input--alert:focus + .input-icon__icon {
+  color: #1fbad6;
+}
+
 .input--warning {
   border-color: #ecab20;
   box-shadow: 0 0 3px #ecab20;
@@ -762,6 +786,10 @@ th {
 .input--warning:focus {
   border-color: #ecab20;
   box-shadow: 0 0 3px #ecab20;
+}
+
+.input--warning:focus + .input-icon__icon {
+  color: #1fbad6;
 }
 
 .input--disabled {

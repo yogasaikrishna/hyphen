@@ -41,6 +41,10 @@ $input-box-shadow: 0 0 3px;
   &:focus {
     border-color: $base-blue;
     box-shadow: $input-box-shadow $base-blue;
+
+    & + .input-icon__icon {
+      color: $base-blue;
+    }    
   }
 }
 
@@ -82,6 +86,10 @@ $input-box-shadow: 0 0 3px;
   &:focus {
     border-color: $color;
     box-shadow: $input-box-shadow $color;
+
+    & + .input-icon__icon {
+      color: $base-blue;
+    }
   }
 }
 
