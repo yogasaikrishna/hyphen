@@ -701,72 +701,96 @@ th {
 
 .input:focus {
   border-color: #1fbad6;
-  box-shadow: 0 0 3px #1fbad6;
+  box-shadow: 0 0 1px #1fbad6;
+}
+
+.input:focus + .input-icon__icon {
+  color: #44cbe4;
 }
 
 .input--primary {
   border-color: #1fbad6;
-  box-shadow: 0 0 3px #1fbad6;
+  box-shadow: 0 0 1px #1fbad6;
 }
 
 .input--primary:focus {
   border-color: #1fbad6;
-  box-shadow: 0 0 3px #1fbad6;
+  box-shadow: 0 0 1px #1fbad6;
 }
 
 .input--secondary {
   border-color: #34495e;
-  box-shadow: 0 0 3px #34495e;
+  box-shadow: 0 0 1px #34495e;
 }
 
 .input--secondary:focus {
   border-color: #34495e;
-  box-shadow: 0 0 3px #34495e;
+  box-shadow: 0 0 1px #34495e;
 }
 
 .input--tertiary {
   border-color: #fff;
-  box-shadow: 0 0 3px #fff;
+  box-shadow: 0 0 1px #fff;
 }
 
 .input--tertiary:focus {
   border-color: #fff;
-  box-shadow: 0 0 3px #fff;
+  box-shadow: 0 0 1px #fff;
 }
 
 .input--success {
   border-color: #629a41;
-  box-shadow: 0 0 3px #629a41;
+  box-shadow: 0 0 1px #629a41;
 }
 
 .input--success:focus {
   border-color: #629a41;
-  box-shadow: 0 0 3px #629a41;
+  box-shadow: 0 0 1px #629a41;
 }
 
 .input--alert {
   border-color: #ca3b27;
-  box-shadow: 0 0 3px #ca3b27;
+  box-shadow: 0 0 1px #ca3b27;
 }
 
 .input--alert:focus {
   border-color: #ca3b27;
-  box-shadow: 0 0 3px #ca3b27;
+  box-shadow: 0 0 1px #ca3b27;
 }
 
 .input--warning {
   border-color: #ecab20;
-  box-shadow: 0 0 3px #ecab20;
+  box-shadow: 0 0 1px #ecab20;
 }
 
 .input--warning:focus {
   border-color: #ecab20;
-  box-shadow: 0 0 3px #ecab20;
+  box-shadow: 0 0 1px #ecab20;
 }
 
 .input--disabled {
   background: #ebebeb;
   cursor: not-allowed;
+}
+
+.input--sharp {
+  border-radius: 0;
+}
+
+.input--tiny {
+  padding: 4px 8px;
+}
+
+.input--small {
+  padding: 6px 8px;
+}
+
+.input--large {
+  padding: 10px 8px;
+}
+
+.input--huge {
+  padding: 12px 8px;
 }
 
 .input-icon {
@@ -776,7 +800,26 @@ th {
 .input-icon__icon {
   color: #d9d9d9;
   position: absolute;
+}
+
+.input-icon__icon {
   top: 11px;
+}
+
+.input-icon--tiny__icon {
+  top: 6px;
+}
+
+.input-icon--small__icon {
+  top: 8px;
+}
+
+.input-icon--large__icon {
+  top: 12px;
+}
+
+.input-icon--huge__icon {
+  top: 14px;
 }
 
 .input-icon--right .input-icon__icon {

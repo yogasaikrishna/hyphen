@@ -3,7 +3,7 @@
 $input-border: 1px solid $base-border-color !default;
 
 // Box shadow
-$input-box-shadow: 0 0 3px;
+$input-box-shadow: 0 0 1px;
 
 // Function returns all/set of input types
 @function input-elements($types: ()) {
@@ -41,6 +41,10 @@ $input-box-shadow: 0 0 3px;
   &:focus {
     border-color: $base-blue;
     box-shadow: $input-box-shadow $base-blue;
+
+    & + .input-icon__icon {
+      color: lighten($base-blue, 10%);
+    }
   }
 }
 
@@ -51,8 +55,13 @@ $input-box-shadow: 0 0 3px;
   @at-root #{&}__icon {
     color: darken($base-white, 15%);
     position: absolute;
-    top: 11px;
   }
+
+  @at-root #{&}__icon { top: 11px; }
+  @at-root #{&}--tiny__icon { top: 6px; }
+  @at-root #{&}--small__icon { top: 8px; }
+  @at-root #{&}--large__icon { top: 12px; }
+  @at-root #{&}--huge__icon { top: 14px; }
 }
 
 // Position icon inside the input field
@@ -100,6 +109,13 @@ $input-box-shadow: 0 0 3px;
     background: darken($base-white, 8%);
     cursor: not-allowed;
   }
+
+  @at-root #{&}--sharp { border-radius: 0; }
+
+  @at-root #{&}--tiny { padding: 4px 8px; }
+  @at-root #{&}--small { padding: 6px 8px; }
+  @at-root #{&}--large { padding: 10px 8px; }
+  @at-root #{&}--huge { padding: 12px 8px; }
 }
 
 // Input with icon
