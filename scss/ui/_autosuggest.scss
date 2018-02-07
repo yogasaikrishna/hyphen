@@ -1,0 +1,82 @@
+/*------------- MIXINS -----------------*/
+// Transition
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//Border Raduis
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//Box Shadow
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  border-collapse: separate;
+}
+
+//Box Shadow None
+@mixin box-shadow-none{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+.fd-suggestions {
+  margin: 20px 0 0;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  @include box-shadow(0 1px 1px 0 rgba(0, 0, 0, 0.2));
+  .fd-suggestion-item {
+    padding: 20px;
+    border-bottom: 1px solid #E7E3E3;
+    background: #FFFFFF;
+    color: #868686;
+    cursor: pointer;
+    @include transition(all 0.3s ease);
+    &:hover,
+    &.active {
+      background-color: #f3f3f3;
+    }
+    .desc  {
+      text-transform: capitalize;
+      font: {
+        size: 14px;
+      }
+      p {
+        margin: 0 0 5px;
+        line-height: normal;
+      }
+      .country {
+        text-transform: uppercase;
+        margin-left: 10px;
+        display: inline-block;
+      }
+      .city {
+        margin-left: 10px;
+        text-transform: uppercase;
+      }
+      .head-country {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      h5 {
+        font: {
+          weight: 600;
+          size: 16px;
+        }
+        margin: 0 0 10px;
+      }
+    }
+  }
+}
