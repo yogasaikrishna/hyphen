@@ -1529,3 +1529,48 @@ h1, h2, h3, h4, h5, h6, label, button, table, textarea, input, select, ul, li {
   position: relative;
   width: 50%;
 }
+
+/*------------- MIXINS -----------------*/
+/*=============== VARIABLES ================*/
+.fd-suggestions {
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  border-collapse: separate;
+  margin: 20px 0 0;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+}
+
+.fd-suggestions .fd-suggestion-item {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E7E3E3;
+  color: #868686;
+  cursor: pointer;
+  padding: 20px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.fd-suggestions .fd-suggestion-item:hover, .fd-suggestions .fd-suggestion-item.active {
+  background-color: #F3F3F3;
+}
+
+.fd-suggestions .fd-suggestion-item .desc {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.fd-suggestions .fd-suggestion-item .desc p {
+  line-height: normal;
+  margin: 0 0 5px;
+}
+
+.fd-suggestions .fd-suggestion-item .desc .city, .fd-suggestions .fd-suggestion-item .desc .country {
+  margin-left: 10px;
+  text-transform: uppercase;
+}

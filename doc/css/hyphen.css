@@ -1531,23 +1531,24 @@ h1, h2, h3, h4, h5, h6, label, button, table, textarea, input, select, ul, li {
 }
 
 /*------------- MIXINS -----------------*/
+/*=============== VARIABLES ================*/
 .fd-suggestions {
-  margin: 20px 0 0;
-  max-height: calc(100vh - 130px);
-  overflow-y: auto;
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   border-collapse: separate;
+  margin: 20px 0 0;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
 }
 
 .fd-suggestions .fd-suggestion-item {
-  padding: 20px;
-  border-bottom: 1px solid #E7E3E3;
   background: #FFFFFF;
+  border-bottom: 1px solid #E7E3E3;
   color: #868686;
   cursor: pointer;
+  padding: 20px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -1556,37 +1557,20 @@ h1, h2, h3, h4, h5, h6, label, button, table, textarea, input, select, ul, li {
 }
 
 .fd-suggestions .fd-suggestion-item:hover, .fd-suggestions .fd-suggestion-item.active {
-  background-color: #f3f3f3;
+  background-color: #F3F3F3;
 }
 
 .fd-suggestions .fd-suggestion-item .desc {
-  text-transform: capitalize;
   font-size: 14px;
+  text-transform: capitalize;
 }
 
 .fd-suggestions .fd-suggestion-item .desc p {
-  margin: 0 0 5px;
   line-height: normal;
+  margin: 0 0 5px;
 }
 
-.fd-suggestions .fd-suggestion-item .desc .country {
-  text-transform: uppercase;
-  margin-left: 10px;
-  display: inline-block;
-}
-
-.fd-suggestions .fd-suggestion-item .desc .city {
+.fd-suggestions .fd-suggestion-item .desc .city, .fd-suggestions .fd-suggestion-item .desc .country {
   margin-left: 10px;
   text-transform: uppercase;
-}
-
-.fd-suggestions .fd-suggestion-item .desc .head-country {
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
-.fd-suggestions .fd-suggestion-item .desc h5 {
-  font-weight: 600;
-  font-size: 16px;
-  margin: 0 0 10px;
 }

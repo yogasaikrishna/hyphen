@@ -25,57 +25,49 @@
   border-collapse: separate;
 }
 
-//Box Shadow None
-@mixin box-shadow-none{
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  box-shadow: none;
-}
+/*=============== VARIABLES ================*/
+// Colors
+$white: #FFFFFF;
+$bonjore: #E7E3E3;
+$gray: #868686;
+$concrete: #F3F3F3;
+// margins & padding
+$margin-base-5: 5px;
+$padding-base-5: 5px;
+// typography
+$font-base-size: 14px;
+
 .fd-suggestions {
-  margin: 20px 0 0;
+  @include box-shadow(0 1px 1px 0 rgba(0, 0, 0, 0.2));
+  margin: $margin-base-5 * 4 0 0;
   max-height: calc(100vh - 130px);
   overflow-y: auto;
-  @include box-shadow(0 1px 1px 0 rgba(0, 0, 0, 0.2));
   .fd-suggestion-item {
-    padding: 20px;
-    border-bottom: 1px solid #E7E3E3;
-    background: #FFFFFF;
-    color: #868686;
+    background: $white;
+    border-bottom: 1px solid $bonjore;
+    color: $gray;
     cursor: pointer;
+    padding: $padding-base-5 * 4;
     @include transition(all 0.3s ease);
     &:hover,
     &.active {
-      background-color: #f3f3f3;
+      background-color: $concrete;
     }
-    .desc  {
-      text-transform: capitalize;
+    .desc {
       font: {
-        size: 14px;
+        size: $font-base-size;
       }
+      text-transform: capitalize;
       p {
-        margin: 0 0 5px;
         line-height: normal;
-      }
-      .country {
-        text-transform: uppercase;
-        margin-left: 10px;
-        display: inline-block;
+        margin: 0 0 $margin-base-5;
       }
       .city {
-        margin-left: 10px;
+        margin-left: $margin-base-5 * 2;
         text-transform: uppercase;
       }
-      .head-country {
-        text-transform: uppercase;
-        margin-bottom: 15px;
-      }
-      h5 {
-        font: {
-          weight: 600;
-          size: 16px;
-        }
-        margin: 0 0 10px;
+      .country {
+        @extend .city;
       }
     }
   }
