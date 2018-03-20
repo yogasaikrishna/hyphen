@@ -1,0 +1,74 @@
+/*------------- MIXINS -----------------*/
+// Transition
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//Border Raduis
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//Box Shadow
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  border-collapse: separate;
+}
+
+/*=============== VARIABLES ================*/
+// Colors
+$white: #FFFFFF;
+$bonjore: #E7E3E3;
+$gray: #868686;
+$concrete: #F3F3F3;
+// margins & padding
+$margin-base-5: 5px;
+$padding-base-5: 5px;
+// typography
+$font-base-size: 14px;
+
+.fd-suggestions {
+  @include box-shadow(0 1px 1px 0 rgba(0, 0, 0, 0.2));
+  margin: $margin-base-5 * 4 0 0;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  .fd-suggestion-item {
+    background: $white;
+    border-bottom: 1px solid $bonjore;
+    color: $gray;
+    cursor: pointer;
+    padding: $padding-base-5 * 4;
+    @include transition(all 0.3s ease);
+    &:hover,
+    &.active {
+      background-color: $concrete;
+    }
+    .desc {
+      font: {
+        size: $font-base-size;
+      }
+      text-transform: capitalize;
+      p {
+        line-height: normal;
+        margin: 0 0 $margin-base-5;
+      }
+      .city {
+        margin-left: $margin-base-5 * 2;
+        text-transform: uppercase;
+      }
+      .country {
+        @extend .city;
+      }
+    }
+  }
+}
