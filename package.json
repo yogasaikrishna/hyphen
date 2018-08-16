@@ -2,20 +2,20 @@
   "name": "hyphen",
   "version": "0.1.2",
   "description": "Hyphen is a CSS Framework",
-  "main": "index.js",
-  "directories": {
-    "doc": "doc"
-  },
+  "main": "dist/hyphen.css",
+  "files": [
+      "dist"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/finday/hyphen.git"
+    "url": "git+https://github.com/yogasaikrishna/hyphen.git"
   },
   "author": "Yogasaikrishna",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/finday/hyphen/issues"
+    "url": "https://github.com/yogasaikrishna/hyphen/issues"
   },
-  "homepage": "https://github.com/finday/hyphen#readme",
+  "homepage": "https://github.com/yogasaikrishna/hyphen#readme",
   "devDependencies": {
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
